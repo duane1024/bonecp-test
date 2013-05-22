@@ -15,6 +15,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
+// Used a test database called 'bonecptest' with user/pw = test/test
+// Created a table with 'create table person(name varchar(256), age integer);' then inserted a hundred values into that table
+// Running on Mac OS X 10.8.3 with MySQL 5.6.10 64-bit
 public class ConnectionPoolTest {
   private static final Logger logger = LoggerFactory.getLogger(ConnectionPoolTest.class);
   private static DataSource dataSource;

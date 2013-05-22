@@ -12,29 +12,46 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jolbox</groupId>
             <artifactId>bonecp</artifactId>
-            <version>0.8.0-rc2-SNAPSHOT</version>
+            <version>${bonecp.version}</version>
+        </dependency>
+        <!-- This should be pulled in by bonecp but is not found at runtime for some reason if dependency is not included -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
     </dependencies>
 
 
     <properties>
+        <bonecp.version>0.8.0-rc2-SNAPSHOT</bonecp.version>
         <jdk.version>1.7</jdk.version>
+        <guava.version>13.0.1</guava.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <junit.version>3.8.1</junit.version>
+        <!-- May want to upgrade our MySQL version to ensure there are no errors in older driver -->
+        <mysql.version>5.1.9</mysql.version>
     </properties>
 
     <build>
